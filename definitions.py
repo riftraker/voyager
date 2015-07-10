@@ -70,11 +70,15 @@ def user_description(choice):
 		print "SPECIAL: Can sneak past many foes unnoticed."
 
 def chosen_profession(prof_choice):
+
 	if prof_choice == "1":
-		print "I thought you looked Pilot-ey."
+		print "\nI thought you looked Pilot-ey."
+
 	elif prof_choice == "2":
-		print "I thought you looked Bounty Hunter-ey."
+		print "\nI thought you looked Bounty Hunter-ey."
+
 	elif prof_choice == "3":
-		print "I thought you looked Medic-ey."
+		print "\nI thought you looked Medic-ey."
+
 	elif prof_choice == "4":
-		print "I thought you looked Scoundrel-ey."
+		print "\nI thought you looked Scoundrel-ey."
