@@ -2,17 +2,6 @@ from sys import exit
 import time
 import random
 
-def galley():
-	print "Upon entering the galley, you notice a pungent stench that fills"
-	print "the room.  You start poring through cabinets, attempting to"
-	print "locate the foul odor.  Eventually you locate it's source."
-	print "You left the space bananas out before entering hibernation."
-	print "Way to go..."
-	print "\n"
-	print 
-
-	excuse = raw_input("> ")
-
 def start_console(shipname):
 	global ship_day
 	global ship_month
@@ -32,7 +21,6 @@ def start_console(shipname):
 	print "\n"
 
 def user_description(choice):
-	
 	if choice == "1":
 		print "\n"
 		print "Pilot"
@@ -70,7 +58,6 @@ def user_description(choice):
 		print "SPECIAL: Can sneak past many foes unnoticed."
 
 def chosen_profession(prof_choice):
-
 	if prof_choice == "1":
 		print "\nI thought you looked Pilot-ey."
 
@@ -82,3 +69,53 @@ def chosen_profession(prof_choice):
 
 	elif prof_choice == "4":
 		print "\nI thought you looked Scoundrel-ey."
+
+
+def console_home():
+	print "\n"
+	print "Loading system directory..."
+	time.sleep(0.1)
+
+	print ">Ship Status"
+	time.sleep(0.1)
+
+	print ">Transmission Logs"
+	time.sleep(0.1)
+
+	print ">Next Destination"
+	time.sleep(0.1)
+
+	print ">Exit"
+
+	menu_selection = raw_input("\n> ").lower()
+
+	if "ship" in menu_selection:
+		ship_status()
+	elif "transmission" in menu_selection:
+		transmission_log()
+	elif "next" in menu_selection:
+		next_dest()
+	elif "exit" in menu_selection:
+		print "\nThank you for using the console.  Shutting down."
+
+def ship_status():
+	print "\nHull  : 10"
+	print "Shield: 05"
+	print "Radar:  10"
+	print "Comms:  00"
+	back = raw_input("Type 'x' to go back: ")
+	if back == "x":
+		console_home()
+
+def transmission_log():
+	print "\nTransmissions - "
+	print "\nERR: NO LOGS FOUND, COMMS SYSTEM NOT IN OPERATION."
+	back = raw_input("Type 'x' to go back: ")
+	if back == "x":
+		console_home()
+
+def next_dest():
+	print "\nNext destination:"
+	back = raw_input("\nType 'x' to go back: ")
+	if back == "x":
+		console_home()

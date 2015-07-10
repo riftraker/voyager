@@ -3,13 +3,13 @@ import random
 import time
 import definitions
 
-
 print "\nYou awake from suspended hibernation to the cryo-chamber."
 print "The other tubes are empty...turns out it wasn't a bad nightmare"
 print "after all."
 print "You are the lone survivor aboard---"
 print "What was this vessel called again?"
 
+# sets the name of the ship
 global user_ship
 user_ship = raw_input("> ")
 
@@ -19,9 +19,10 @@ print "fending off astro-raiders."
 print "No use crying over spilled milk."
 print "Have to motivate."
 print "Have to survive."
-print "Let's fire up the ship's console and make sure everything is still"
+print "\nLet's fire up the ship's console and make sure everything is still"
 print "operating normally."
 
+#
 definitions.start_console(user_ship.title())
 
 print "user: "
@@ -30,7 +31,7 @@ global user_name
 user_name = raw_input("> ")
 
 print "Welcome, %s." % user_name
-print "This is your first time in the %s system console." % user_ship
+print "This is your first time in %s system console." % user_ship.title()
 
 chosen = False
 
@@ -62,3 +63,6 @@ while chosen == False:
 
 	else:
 		print "\nPlease enter a number between 1 and 4."
+
+
+definitions.console_home()
