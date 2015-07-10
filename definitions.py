@@ -119,3 +119,21 @@ def next_dest():
 	back = raw_input("\nType 'x' to go back: ")
 	if back == "x":
 		console_home()
+
+def cryo():
+	print "\nThere's nothing much left in the cryo-chamber, might as well"
+	print "do the rounds to make sure the rest of the ship hasn't fallen"
+	print "apart, eh?"
+	print "\nThere are 3 halls in front of you.  One heading to the front of the"
+	print "ship, which leads to the Galley and the Bridge.  The second heading"
+	print "towards the Gym.  The third heading towards the Engine Room."
+
+def leaving_cryo(choice):
+	if choice == "1":
+		print "You make your way down the corridor to the Galley."
+		print "Along the way, you take a minute to gaze through one of the"
+		print "small circular windows that line the walkway."
+		print "Can't make out much.  There doesn't seem to be any ship debris"
+		print "which is a great sign, all things considered."
+	elif choice == "2":
+		

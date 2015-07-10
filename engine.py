@@ -22,7 +22,7 @@ print "Have to survive."
 print "\nLet's fire up the ship's console and make sure everything is still"
 print "operating normally."
 
-#
+# lets the user login to the consol and set name
 definitions.start_console(user_ship.title())
 
 print "user: "
@@ -66,3 +66,21 @@ while chosen == False:
 
 
 definitions.console_home()
+
+definitions.cryo()
+
+chosen = False
+
+while chosen == False:
+	print "\nWhere to?"
+	print "1. Galley"
+	print "2. Bridge"
+	print "3. Gym"
+	print "4. Engine Room"
+
+	choice = raw_input("> ")
+
+	if choice == "1" or choice == "2" or choice == "3" or choice == "4":
+		definitions.leaving_cryo(choice)
+	else:
+		print "\nPlease enter a number between 1 and 4."
